@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* App.css */
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    
+  }
+  .content{
+    height: 40vh;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Header styles */
+  h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Movie list styles */
+  .movie-list {
+    
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    
+    justify-content: center;
+  }
+  
+  .movie-list li {
+    
+    width: 80%;
+    height: 70%;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .movie-list li:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-list a {
+    text-decoration: none;
+    color: #333;
+
+  }
+  
+  .movie-list img {
+    width: 100%;
+    height: 70%;
+  }
+  
+  /* Movie details styles */
+  .movie-details {
+    text-align: center;
+  }
+  
+  .home {
+    background-image: url("./image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 40vh;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .movie-list li {
+      width: 45%; /* Adjust the width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .movie-list li {
+      width: 90%; /* Adjust the width for even smaller screens */
+    }
+  }
+  
