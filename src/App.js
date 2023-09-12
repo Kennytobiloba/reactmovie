@@ -47,9 +47,10 @@ function App() {
 
   return (
     <div>
-      <HomeContent handleSearchChange={handleSearchChange} />
+     
       <Router>
         <div className="App">
+        <HomeContent handleSearchChange={handleSearchChange} />
           <Switch>
             <Route path="/movie/:id" component={MovieDetails} />
             <Route exact path="/">
